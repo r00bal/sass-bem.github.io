@@ -1,0 +1,68 @@
+@use '../utils/fonts' as font;
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.8fr auto 1.5fr 1.2fr;
+  width: 100%;
+  justify-items: center;
+  min-height: 1000px;
+  color: var(--white-color);
+  &__hero-img {
+    z-index: 0;
+    position: absolute;
+    justify-items: center;
+    width: calc(100% - 25px - 25px);
+    min-height: 1000px;
+    background-image: linear-gradient(
+        to bottom,
+        var(--red-colorRGBwithOpacity),
+        var(--orange-colorRGBwithOpacity)
+      ),
+      url(../assets/img/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  &__navbar {
+    align-self: start;
+  }
+
+  &__title {
+    text-align: center;
+    justify-self: center;
+    align-self: end;
+    z-index: 2;
+    font-family: font.$Kaushan-script;
+    font-size: 72px;
+    height: fit-content;
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    z-index: 2;
+    justify-self: center;
+    align-self: start;
+    font-family: font.$Montserrat;
+    font-size: 150px;
+    text-align: center;
+    line-height: 0.8;
+    font-weight: 700;
+    max-height: 320px;
+  }
+
+  &__button {
+    height: fit-content;
+    color: inherit;
+    align-self: start;
+    z-index: 2;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    width: 160px;
+    height: 40px;
+    border: 2px solid var(--white-color);
+  }
+}

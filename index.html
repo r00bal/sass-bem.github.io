@@ -7,17 +7,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;700;800&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@200;300;400;500;700;800&family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="dist/style.css" />
+    <link rel="stylesheet" type="text/css" href="./dist/style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="grid">
       <header class="header">
-        <nav class="navbar">
-          <a href="/#" class="header__logo" alt="logo">some logo</a>
+        <div src="assets/img/hero-img.jpg" class="header__hero-img"></div>
+        <nav class="header__navbar navbar mw1200">
+          <a href="/#" class="navbar__logo" alt="logo">MoGo</a>
           <ul class="navbar__list">
             <li class="navbar__item">about</li>
             <li class="navbar__item">servie</li>
@@ -28,11 +29,13 @@
             <li class="navbar__item">search</li>
           </ul>
         </nav>
+
         <h1 class="header__title">Creatvie Template</h1>
-        <p class="header__text">Welcome to Mogo</p>
+        <p class="header__text">Welcome <br />to Mogo</p>
+        <button class="header__button">Learn more</button>
       </header>
       <main class="main">
-        <section class="container">
+        <section class="container mw1200">
           <h2 class="container__title">We work with</h2>
           <p class="container__text">AMAZING SERVICES</p>
           <hr class="container__devider" />

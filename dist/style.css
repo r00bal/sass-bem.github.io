@@ -1,1 +1,180 @@
-html{font-size:100%;box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}body{margin:0 !important;padding:0 !important;font-family:"Roboto",sans-serif;line-height:1.3;background-color:var(--background-color);color:var(--text-color)}:root{--background-color: #ffffff;--white-color: #ffffff;--text-color:#333333 ;--description-color:#999999 ;--green-color: #95E1D3;--red-color: #F38181;--active-nav: #FCE38A}.grid{display:grid;grid-template-columns:1fr;grid-template-rows:auto auto auto;max-width:1920px}.mw1200{max-width:1200px}.header{background:url(../app/assets/img/Słupia.jpg) center center/cover no-repeat fixed;height:100vh;max-height:1000px}/*# sourceMappingURL=style.css.map */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.3;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+:root {
+  --background-color: #ffffff;
+  --white-color: #ffffff;
+  --text-color: #333333;
+  --description-color: #999999;
+  --blue-color: #95e1d3;
+  --red-color: #f38181;
+  --orange-color: #fce38a;
+  --green-color: #eaffd0;
+  --red-colorRGBwithOpacity: rgba(243, 129, 129, 0.6);
+  --orange-colorRGBwithOpacity: rgba(252, 227, 138, 0.6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.mw1200 {
+  max-width: 1200px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.8fr auto 1.5fr 1.2fr;
+  width: 100%;
+  justify-items: center;
+  min-height: 1000px;
+  color: var(--white-color);
+}
+.header__hero-img {
+  z-index: 0;
+  position: absolute;
+  justify-items: center;
+  width: calc(100% - 25px - 25px);
+  min-height: 1000px;
+  background-image: linear-gradient(to bottom, var(--red-colorRGBwithOpacity), var(--orange-colorRGBwithOpacity)), url(../assets/img/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.header__navbar {
+  align-self: start;
+}
+.header__title {
+  text-align: center;
+  justify-self: center;
+  align-self: end;
+  z-index: 2;
+  font-family: "Kaushan Script", cursive;
+  font-size: 72px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 45px;
+}
+.header__text {
+  z-index: 2;
+  justify-self: center;
+  align-self: start;
+  font-family: "Montserrat", sans-serif;
+  font-size: 150px;
+  text-align: center;
+  line-height: 0.8;
+  font-weight: 700;
+  max-height: 320px;
+}
+.header__button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: inherit;
+  align-self: start;
+  z-index: 2;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  width: 160px;
+  height: 40px;
+  border: 2px solid var(--white-color);
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 60px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  color: var(--white-color);
+  z-index: 2;
+}
+.navbar__logo {
+  display: grid;
+  font-weight: 800;
+  color: inherit;
+  text-decoration: none;
+  align-content: center;
+}
+.navbar__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 90px);
+  max-width: 600px;
+  justify-self: end;
+  font-weight: 300;
+  align-content: center;
+}
+.navbar__item {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  grid-row: 1;
+  padding-bottom: 5px;
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.navbar__item::before {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  content: "";
+  border-bottom: 2px solid var(--orange-color);
+  transition: all 0.2s ease;
+  transform: translateX(-120%);
+}
+.navbar__item:hover {
+  color: var(--orange-color);
+}
+.navbar__item:hover::before {
+  transform: translateX(0);
+}/*# sourceMappingURL=style.css.map */

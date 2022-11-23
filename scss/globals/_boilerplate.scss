@@ -1,0 +1,38 @@
+@use '../utils/fonts' as fonts;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: fonts.$Roboto;
+  line-height: 1.3;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
