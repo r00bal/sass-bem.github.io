@@ -1,4 +1,5 @@
 @use '../utils/fonts' as font;
+@use '../utils/breakpoints' as u;
 
 .header {
   display: grid;
@@ -24,6 +25,11 @@
     background-position: top center;
     background-attachment: fixed;
     background-size: cover;
+    @include u.breakpoint-down(small) {
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+    }
   }
 
   &__navbar {
@@ -36,7 +42,7 @@
     align-self: end;
     z-index: 2;
     font-family: font.$Kaushan-script;
-    font-size: 72px;
+    font-size: clamp(32px, calc(16px + 4vw), 72px);
     height: fit-content;
     margin-bottom: 45px;
   }
@@ -46,7 +52,7 @@
     justify-self: center;
     align-self: start;
     font-family: font.$Montserrat;
-    font-size: 150px;
+    font-size: clamp(50px, calc(16px + 12vw), 150px);
     text-align: center;
     line-height: 0.8;
     font-weight: 700;

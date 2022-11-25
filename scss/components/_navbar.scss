@@ -1,4 +1,5 @@
 @use '../utils/fonts' as font;
+@use '../utils/breakpoints' as u;
 
 .navbar {
   display: grid;
@@ -8,38 +9,81 @@
   margin: 0 auto;
   font-family: font.$Montserrat;
   color: var(--white-color);
-  z-index: 2;
+  z-index: 10;
+  @include u.breakpoint-down(small) {
+    grid-template-columns: 100px 100px;
+    justify-content: space-between;
+  }
 
   &__logo {
     display: grid;
     font-weight: 800;
     color: inherit;
     text-decoration: none;
+    justify-content: center;
     align-content: center;
+  }
+
+  &__menu {
+    font-family: inherit;
+    color: var(--white-color);
+    display: block;
+    padding: 3px;
+    margin: 0;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    &:focus + .navbar__list {
+      transform: translateX(-120%);
+    }
+    @include u.breakpoint-up(medium) {
+      display: none;
+    }
   }
 
   &__list {
     list-style: none;
-
     display: grid;
-    grid-template-columns: repeat(auto-fill, 80px);
-    max-width: 600px;
+    width: 100%;
+    grid-template-columns: repeat(7, minmax(60px, 80px));
+    max-width: 700px;
     justify-self: end;
     font-weight: 300;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     justify-items: center;
+    @include u.breakpoint-down(small) {
+      z-index: 4;
+      position: absolute;
+      top: 0;
+      transition: transform 0.3s ease-out;
+      left: 120%;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, minmax(50px, calc(80px + 2vh)));
+      min-height: 100vh;
+      place-items: center;
+      align-content: center;
+      background: rgba(0, 0, 0, 0.638);
+      backdrop-filter: blur(10px);
+    }
   }
+
   &__item {
     width: fit-content;
-    grid-row: 1;
     padding-bottom: 5px;
     position: relative;
     text-transform: uppercase;
     overflow: hidden;
     font-size: 12px;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
+
+    @include u.breakpoint-down(small) {
+      font-size: 24px;
+      img {
+        width: 30px;
+      }
+    }
 
     &::before {
       position: absolute;
@@ -57,8 +101,5 @@
         transform: translateX(0);
       }
     }
-  }
-  &__item--al {
-    justify-self: start;
   }
 }
