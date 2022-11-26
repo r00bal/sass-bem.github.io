@@ -5,7 +5,9 @@
   list-style: none;
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
-  gap: 3px;
+
+  column-gap: 50px;
+  row-gap: 38px;
   @include u.breakpoint-up(medium) {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -14,7 +16,6 @@
   }
 
   &__item {
-    background-color: blue;
     @include u.breakpoint-up(medium) {
       grid-column: span 2;
       &:nth-last-child(1):nth-child(odd) {
