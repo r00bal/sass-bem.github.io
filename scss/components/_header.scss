@@ -8,12 +8,18 @@
   width: 100%;
   justify-items: center;
   min-height: 1000px;
+  position: relative;
   color: var(--white-color);
+  @include u.breakpoint-down(small) {
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
   &__hero-img {
     z-index: 0;
     position: absolute;
     justify-items: center;
-    width: calc(100% - 25px - 25px);
+    width: 100%;
     min-height: 1000px;
     background-image: linear-gradient(
         to bottom,
@@ -28,7 +34,7 @@
     @include u.breakpoint-down(small) {
       padding: 0;
       width: 100%;
-      min-height: 100vh;
+      min-height: 100%;
     }
   }
 

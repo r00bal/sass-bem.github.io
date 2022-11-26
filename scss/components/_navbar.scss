@@ -78,7 +78,6 @@
     font-size: 12px;
     cursor: pointer;
     transition: transform 0.5s ease;
-
     @include u.breakpoint-down(small) {
       font-size: 24px;
       img {

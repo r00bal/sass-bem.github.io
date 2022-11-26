@@ -1,0 +1,29 @@
+@use '../utils/fonts' as font;
+
+.chapter {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  &__title {
+    font-family: font.$Kaushan-script;
+    font-size: 1.5 rem;
+    text-align: center;
+  }
+
+  &__text {
+    margin-top: 9px;
+    font-family: font.$Montserrat;
+    font-size: 1.875 rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__divider {
+    width: 60px;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--red-color);
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}
