@@ -192,7 +192,7 @@ button {
 @media (max-width: 39.9375em) {
   .navbar__list {
     z-index: 4;
-    position: absolute;
+    position: fixed;
     top: 0;
     transition: transform 0.3s ease-out;
     left: 120%;
@@ -204,13 +204,13 @@ button {
     background: rgba(0, 0, 0, 0.638);
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
+    touch-action: none;
   }
 }
 .navbar__item {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding-bottom: 5px;
   position: relative;
   text-transform: uppercase;
   overflow: hidden;

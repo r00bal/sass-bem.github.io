@@ -54,7 +54,7 @@
     justify-items: center;
     @include u.breakpoint-down(small) {
       z-index: 4;
-      position: absolute;
+      position: fixed;
       top: 0;
       transition: transform 0.3s ease-out;
       left: 120%;
@@ -65,12 +65,13 @@
       align-content: center;
       background: rgba(0, 0, 0, 0.638);
       backdrop-filter: blur(10px);
+      touch-action: none;
     }
   }
 
   &__item {
     width: fit-content;
-    padding-bottom: 5px;
+
     position: relative;
     text-transform: uppercase;
     overflow: hidden;
