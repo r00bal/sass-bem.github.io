@@ -2,6 +2,8 @@
 @use '../utils/variables' as vars;
 
 .figure {
+  display: grid;
+  place-items: center;
   &__mask {
     z-index: 10;
     position: relative;

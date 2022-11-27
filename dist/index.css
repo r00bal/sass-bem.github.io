@@ -41,7 +41,9 @@ button {
   --background-color: #ffffff;
   --white-color: #ffffff;
   --text-color: #333333;
+  --light-grey: #cccccc;
   --description-color: #999999;
+  --border-color: #e5e5e5;
   --blue-color: #95e1d3;
   --red-color: #f38181;
   --orange-color: #fce38a;

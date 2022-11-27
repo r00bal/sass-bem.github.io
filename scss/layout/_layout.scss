@@ -1,9 +1,9 @@
 @use '../utils/breakpoints' as u;
 .layout {
   display: grid;
-  grid-template-columns: auto;
-  max-width: 1920px;
+  grid-template-columns: 1fr;
   margin: 0 auto;
+  justify-items: center;
   padding: 24px;
   @include u.breakpoint-down(small) {
     padding: 0;

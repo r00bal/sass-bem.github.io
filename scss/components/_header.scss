@@ -62,15 +62,8 @@
   }
 
   &__button {
-    height: fit-content;
-    color: inherit;
     align-self: start;
     z-index: 2;
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    width: 160px;
-    height: 40px;
-    border: 2px solid var(--white-color);
   }
 }

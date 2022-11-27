@@ -19,7 +19,7 @@
         <div class="header__hero-img mw1920"></div>
         <nav class="header__navbar navbar mw1200">
           <a href="/#" class="navbar__logo" alt="logo">MoGo</a>
-          <button class="navbar__menu">Menu</button>
+          <button class="navbar__menu button button--text">Menu</button>
           <ul class="navbar__list" tabindex="0">
             <li class="navbar__item">about</li>
             <li class="navbar__item">servie</li>
@@ -37,7 +37,9 @@
 
         <h1 class="header__title">Creatvie Template</h1>
         <p class="header__text">Welcome <br />to Mogo</p>
-        <button class="header__button">Learn more</button>
+        <button class="header__button button button--outlined">
+          Learn more
+        </button>
       </header>
       <main class="main">
         <section class="section mw1150">
@@ -419,7 +421,22 @@
           </ul>
         </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer mw1200">
+        <small class="footer__copy"
+          >&copy; Copyright 2058, Example Corporation</small
+        >
+        <div class="footer__subscribe">
+          <input
+            type="text"
+            name="search"
+            class="footer__input"
+            placeholder="Your Email..."
+          />
+          <button type="submit" class="footer__button button button--filled">
+            Subscribe
+          </button>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

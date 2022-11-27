@@ -21,6 +21,10 @@
     width: 56px;
     height: 56px;
     background-color: var(--orange-color);
+    border-right: 1px solid var(--red-color);
+    &:last-child {
+      border-right: none;
+    }
     &:hover {
       background-color: var(--red-color);
       path {

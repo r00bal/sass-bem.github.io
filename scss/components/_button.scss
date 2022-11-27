@@ -1,0 +1,26 @@
+@use '../utils/fonts' as font;
+.button {
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-family: font.$Montserrat;
+  padding: 11px 33px;
+  color: var(--white-color);
+  background: none;
+  cursor: pointer;
+  &--outlined {
+    background-color: none;
+    border: 2px solid var(--white-color);
+    &:hover {
+      border-color: var(--red-color);
+      background-color: var(--red-color);
+    }
+  }
+  &--filled {
+    border: 2px solid var(--blue-color);
+    background-color: var(--blue-color);
+    &:hover {
+      color: var(--blue-color);
+      background-color: var(--white-color);
+    }
+  }
+}
