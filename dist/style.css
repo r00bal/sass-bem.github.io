@@ -406,7 +406,7 @@ button {
 .figure__mask:before {
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: 200;
+  z-index: 100;
   width: 100%;
   height: 100%;
   display: block;
@@ -420,6 +420,10 @@ button {
 }
 .figure__mask:hover:before {
   opacity: 1;
+}
+.figure__mask:hover .social-media {
+  opacity: 1;
+  transform: translateY(0);
 }
 .figure__img {
   z-index: 1;
@@ -443,4 +447,39 @@ button {
   font-style: italic;
   font-weight: 300;
   text-align: center;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 224px;
+  height: 56px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+.social-media__link {
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  background-color: var(--orange-color);
+}
+.social-media__link:hover {
+  background-color: var(--red-color);
+}
+.social-media__link:hover path {
+  fill: #fff !important;
+}
+.social-media__icon {
+  filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
 }/*# sourceMappingURL=style.css.map */

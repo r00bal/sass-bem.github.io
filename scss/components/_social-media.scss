@@ -1,0 +1,35 @@
+.social-media {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 224px;
+  height: 56px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.2s ease-in;
+  &__link {
+    text-decoration: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    background-color: var(--orange-color);
+    &:hover {
+      background-color: var(--red-color);
+      path {
+        fill: #fff !important;
+      }
+    }
+  }
+
+  &__icon {
+    filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
+  }
+}
