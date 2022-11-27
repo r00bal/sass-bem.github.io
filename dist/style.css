@@ -124,6 +124,10 @@ button {
   padding-bottom: 75px;
 }
 
+.pb82 {
+  padding-bottom: 82px;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr;
@@ -492,6 +496,7 @@ button {
   padding: 11px 33px;
   color: var(--white-color);
   background: none;
+  text-transform: uppercase;
   cursor: pointer;
 }
 .button--outlined {
