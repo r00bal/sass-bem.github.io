@@ -1,5 +1,6 @@
 @use '../utils/fonts' as font;
 @use '../utils/breakpoints' as u;
+@use '../utils/variables' as vars;
 
 .header {
   display: grid;
@@ -21,12 +22,7 @@
     justify-items: center;
     width: 100%;
     min-height: 1000px;
-    background-image: linear-gradient(
-        to bottom,
-        var(--red-colorRGBwithOpacity),
-        var(--orange-colorRGBwithOpacity)
-      ),
-      url(../assets/img/hero-img.jpg);
+    background-image: vars.$main-gradient;
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;

@@ -21,9 +21,11 @@ body {
 h1,
 h2,
 h3,
+h4,
 p,
 ul,
-li {
+li,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -66,6 +68,9 @@ button {
   list-style: none;
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
+  gap: 30px;
+}
+.list-grid--lg-gap {
   -moz-column-gap: 50px;
        column-gap: 50px;
   row-gap: 38px;
@@ -79,6 +84,9 @@ button {
   .list-grid {
     grid-template-columns: repeat(6, 1fr);
   }
+}
+.list-grid__item {
+  line-height: none;
 }
 @media (min-width: 640px) {
   .list-grid__item {
@@ -98,12 +106,20 @@ button {
   max-width: 1200px;
 }
 
+.mw1210 {
+  max-width: 1210px;
+}
+
 .mw1150 {
   max-width: 1150px;
 }
 
 .mw1920 {
   max-width: 1920px;
+}
+
+.pb75 {
+  padding-bottom: 75px;
 }
 
 .header {
@@ -371,4 +387,60 @@ button {
   font-family: "Roboto", sans-serif;
   color: var(--description-color);
   font-family: 14px;
+}
+
+.figure__mask {
+  z-index: 10;
+  position: relative;
+  transition: all 0.2s ease;
+  line-height: 0;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+.figure__mask:before {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  content: "";
+}
+.figure__mask:hover {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0px 0px var(--blue-color);
+}
+.figure__mask:hover:before {
+  opacity: 1;
+  background: linear-gradient(to bottom, var(--red-colorRGBwithOpacity), var(--orange-colorRGBwithOpacity), transparent);
+}
+.figure__img {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+.figure__title {
+  font-family: "Montserrat", sans-serif;
+  font-family: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 27px;
+  margin-bottom: 9px;
+}
+.figure__description {
+  font-family: "Roboto", sans-serif;
+  color: var(--description-color);
+  text-transform: uppercase;
+  font-family: 14px;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
