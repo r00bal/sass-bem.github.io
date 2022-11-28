@@ -1,8 +1,10 @@
 @use '../utils/fonts' as font;
 @use '../utils/breakpoints' as u;
 @use '../utils/variables' as vars;
+@use '../utils/mixins' as m;
 
 .header {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.8fr auto 1.5fr 1.2fr;
@@ -11,6 +13,7 @@
   min-height: 1000px;
   position: relative;
   color: var(--white-color);
+  z-index: 1000;
   @include u.breakpoint-down(small) {
     padding: 0;
     width: 100%;
@@ -22,7 +25,7 @@
     justify-items: center;
     width: 100%;
     min-height: 1000px;
-    background-image: vars.$main-gradient;
+    @include m.gradientBackground(url(../assets/img/hero-img.jpg));
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;

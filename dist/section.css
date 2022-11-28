@@ -1,8 +1,0 @@
-.section {
-  margin-top: 41px;
-  color: var(--text-color);
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
-}/*# sourceMappingURL=section.css.map */

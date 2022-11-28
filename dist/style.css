@@ -104,31 +104,8 @@ button {
   }
 }
 
-.mw1200 {
-  max-width: 1200px;
-}
-
-.mw1210 {
-  max-width: 1210px;
-}
-
-.mw1150 {
-  max-width: 1150px;
-}
-
-.mw1920 {
-  max-width: 1920px;
-}
-
-.pb75 {
-  padding-bottom: 75px;
-}
-
-.pb82 {
-  padding-bottom: 82px;
-}
-
 .header {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.8fr auto 1.5fr 1.2fr;
@@ -137,6 +114,7 @@ button {
   min-height: 1000px;
   position: relative;
   color: var(--white-color);
+  z-index: 1000;
 }
 @media (max-width: 639.8px) {
   .header {
@@ -151,7 +129,7 @@ button {
   justify-items: center;
   width: 100%;
   min-height: 1000px;
-  background-image: linear-gradient(to bottom, var(--red-colorRGBwithOpacity), var(--orange-colorRGBwithOpacity)), url(../assets/img/hero-img.jpg);
+  background: linear-gradient(to bottom, var(--red-colorRGBwithOpacity), var(--orange-colorRGBwithOpacity)), url(../assets/img/hero-img.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
@@ -275,13 +253,13 @@ button {
   position: relative;
   text-transform: uppercase;
   overflow: hidden;
-  font-size: 12px;
+  font-size: 0.75rem;
   cursor: pointer;
   transition: transform 0.5s ease;
 }
 @media (max-width: 639.8px) {
   .navbar__item {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .navbar__item img {
     width: 30px;
@@ -410,7 +388,7 @@ button {
   height: 100%;
   display: block;
   position: absolute;
-  background: linear-gradient(to bottom, var(--red-colorRGBwithOpacity), var(--orange-colorRGBwithOpacity), transparent);
+  background: linear-gradient(to bottom, var(--red-colorRGBwithOpacity), var(--orange-colorRGBwithOpacity)), transparent;
   content: "";
 }
 .figure__mask:hover {
@@ -577,4 +555,28 @@ button {
 .footer__button {
   width: 100%;
   max-width: 150px;
+}
+
+.mw1200 {
+  max-width: 1200px;
+}
+
+.mw1210 {
+  max-width: 1210px;
+}
+
+.mw1150 {
+  max-width: 1150px;
+}
+
+.mw1920 {
+  max-width: 1920px;
+}
+
+.pb75 {
+  padding-bottom: 75px;
+}
+
+.pb82 {
+  padding-bottom: 82px;
 }/*# sourceMappingURL=style.css.map */

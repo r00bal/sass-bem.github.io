@@ -71,15 +71,14 @@
 
   &__item {
     width: fit-content;
-
     position: relative;
     text-transform: uppercase;
     overflow: hidden;
-    font-size: 12px;
+    font-size: 0.75rem;
     cursor: pointer;
     transition: transform 0.5s ease;
     @include u.breakpoint-down(small) {
-      font-size: 24px;
+      font-size: 1.5rem;
       img {
         width: 30px;
       }

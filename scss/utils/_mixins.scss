@@ -1,0 +1,8 @@
+@mixin gradientBackground($backGround) {
+  background: linear-gradient(
+      to bottom,
+      var(--red-colorRGBwithOpacity),
+      var(--orange-colorRGBwithOpacity)
+    ),
+    $backGround;
+}
